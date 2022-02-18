@@ -1,15 +1,19 @@
 import React from 'react';
+import { Line, Bar } from 'react-chartjs-2';
+import { Data, Options } from '../interface/api';
 import {
     Chart as ChartJS,
     CategoryScale,
     LinearScale,
     PointElement,
+    BarElement,
     LineElement,
     Title,
     Tooltip,
     Legend,
 } from 'chart.js';
-import { Line } from 'react-chartjs-2';
+
+
 
 
 ChartJS.register(
@@ -22,39 +26,24 @@ ChartJS.register(
     Legend
 );
 
-export const options = {
-    responsive: true,
-    plugins: {
-        legend: {
-            position: 'top' as const,
-        },
-        title: {
-            display: true,
-            text: 'Chart.js Line Chart',
-        },
-    },
-};
+ChartJS.register(
+    CategoryScale,
+    LinearScale,
+    BarElement,
+    Title,
+    Tooltip,
+    Legend
+);
 
-const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+interface Props {
+    options: Options;
+    data: Data;
+}
 
-export const data = {
-    labels,
-    datasets: [
-        {
-            label: 'Dataset 1',
-            data: labels.map(() => Math.random()),
-            borderColor: 'rgb(255, 99, 132)',
-            backgroundColor: 'rgba(255, 99, 132, 0.5)',
-        },
-        {
-            label: 'Dataset 2',
-            data: labels.map(() => Math.random()),
-            borderColor: 'rgb(53, 162, 235)',
-            backgroundColor: 'rgba(53, 162, 235, 0.5)',
-        },
-    ],
-};
+export const GraphLine = ({ options, data }: Props) => {
 
-export const GraphLine = () => {
-    return <Line options={options} data={data} />;
+    return (<div className='card p-2'>
+        {data ? <Bar options={options} data={data} /> : <p className='text-center'>Loading...</p>}
+    </div>)
+
 }
