@@ -1,0 +1,11 @@
+logo-contenedor {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+
+#logo-container>img {
+   max-width: 50%;
+   border: 2px solid red;
+}

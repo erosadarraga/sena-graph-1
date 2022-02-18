@@ -43,7 +43,7 @@ interface Props {
 export const GraphLine = ({ options, data }: Props) => {
 
     return (<div className='card p-2'>
-        {data ? <Bar options={options} data={data} /> : <p className='text-center'>Loading...</p>}
+        {data ? <Line options={options} data={data} /> : <p className='text-center'>Loading...</p>}
     </div>)
 
 }
