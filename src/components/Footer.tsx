@@ -33,7 +33,7 @@ export const Footer = () => {
                                 <li className="mb-2">
                                     <span className="fa-li"><i className="fas fa-print" /></span><span className="ms-2">Herman Gamez </span>
                                 </li><li className="mb-2">
-                                    <span className="fa-li"><i className="fas fa-print" /></span><span className="ms-2">Isaad Suarez </span>
+                                    <span className="fa-li"><i className="fas fa-print" /></span><span className="ms-2">Manuel Lopez </span>
                                 </li></ul></div>
                         <ul className="fa-ul" >
 
