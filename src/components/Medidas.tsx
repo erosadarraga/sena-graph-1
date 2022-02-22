@@ -15,8 +15,8 @@ export const Medidas = ({ resultado }: Props) => {
         <>
             <div className="card mb-3 col-md-12 pt-2" >
                 <div className="row g-0">
-                    <div className="col-md-3">
-                        <img src={logoGraph} className="img-fluid rounded-start" alt="..." />
+                    <div className="col-md-3 text-center">
+                        <img src={logoGraph} className="py-2 img-fluid rounded-start" alt="..." />
                     </div>
                     <div className="col-md-3 " style={{ backgroundColor: 'rgba(255, 99, 132, 0.4)' }} >
                         <div className="card-body">
@@ -26,8 +26,8 @@ export const Medidas = ({ resultado }: Props) => {
 
                         </div>
                     </div>
-                    <div className="col-md-3">
-                        <img src={logoGraph2} className="img-fluid  rounded-start" alt="..." />
+                    <div className="col-md-3 text-center">
+                        <img src={logoGraph2} className="img-fluid  py-2 rounded-start" alt="..." />
                     </div>
                     <div className="col-md-3" style={{ backgroundColor: 'rgba(53, 162, 235, 0.4)' }}>
                         <div className="card-body">
